@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ustad Harbans Lal "Mujrim" Dasuhavi | Poet & Literary Master</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Noto+Nastaliq+Urdu:wght@400;700&family=Playfair+Display:wght@600;700;900&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --cream: #F9F5EB;
+            --antique-ivory: #F9F5EB;
+            --royal-maroon: #5E2129;
+            --dark-charcoal: #3a3a3a;
+            --antique-gold: #C5A059;
+            --gold-dark: #A67C3B;
+            --gold-light: #E5D5A8;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Merriweather', serif;
+            background-color: var(--cream);
+            background-image: 
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(197, 160, 89, 0.03) 2px,
+                    rgba(197, 160, 89, 0.03) 4px
+                ),
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(197, 160, 89, 0.03) 2px,
+                    rgba(197, 160, 89, 0.03) 4px
+                );
+            color: var(--dark-charcoal);
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(249, 245, 235, 0.98);
+            backdrop-filter: blur(10px);
+            padding: 1rem 3rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+            border-bottom: 3px double var(--antique-gold);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--royal-maroon);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--royal-maroon);
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--antique-gold);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--antique-gold);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--royal-maroon);
+            transition: all 0.3s;
+            border-radius: 2px;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 8rem 3rem 4rem;
+            background: linear-gradient(135deg, var(--cream) 0%, #f0e9d2 100%);
+            border-bottom: 5px double var(--antique-gold);
+            width: 100%;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .profile-photo {
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            margin: 0 auto 2rem;
+            border: 5px solid var(--antique-gold);
+            box-shadow: 
+                0 0 30px rgba(197, 160, 89, 0.5),
+                0 8px 25px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+            background: #e8dcc4;
+            transition: transform 0.3s;
+        }
+
+        .profile-photo:hover {
+            transform: scale(1.05);
+        }
+
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        .profile-photo::before {
+            content: '';
+            position: absolute;
+            inset: -8px;
+            border-radius: 50%;
+            border: 1px solid var(--gold-light);
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 3rem;
+            color: var(--royal-maroon);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            text-shadow: 1px 1px 2px rgba(197, 160, 89, 0.2);
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: var(--antique-gold);
+            font-style: italic;
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .dates {
+            font-size: 1.1rem;
+            color: var(--gold-dark);
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+
+        .intro {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 3rem;
+            width: 100%;
+        }
+
+        section:nth-child(even) {
+            background-color: #f5f0e1;
+        }
+
+        .section-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5rem;
+            color: var(--royal-maroon);
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 1rem;
+            text-shadow: 1px 1px 2px rgba(197, 160, 89, 0.15);
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: var(--antique-gold);
+            box-shadow: 0 0 10px rgba(197, 160, 89, 0.4);
+        }
+
+        h2::before {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 1px;
+            background: var(--gold-light);
+        }
+
+        /* Biography */
+        .biography-text {
+            max-width: 1100px;
+            margin: 0 auto;
+            font-size: 1.05rem;
+            line-height: 2;
+        }
+
+        .biography-content {
+            width: 100%;
+        }
+
+        .biography-image {
+            float: right;
+            width: 450px;
+            margin: 0 0 2rem 2rem;
+        }
+
+        .biography-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 3px double var(--antique-gold);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .image-caption {
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--dark-charcoal);
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+
+        .biography-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 968px) {
+            .biography-image {
+                float: none;
+                width: 100%;
+                margin: 0 0 2rem 0;
+            }
+        }
+
+        /* Poems Section */
+        .poems-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .poem-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border: 3px double var(--antique-gold);
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .poem-card::before {
+            content: '';
+            position: absolute;
+            inset: 6px;
+            border: 1px solid var(--gold-light);
+            border-radius: 5px;
+            pointer-events: none;
+        }
+
+        .poem-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 
+                0 12px 30px rgba(0,0,0,0.2),
+                0 0 25px rgba(197, 160, 89, 0.3);
+        }
+
+        .poem-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--royal-maroon);
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .poem-text {
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .nastaliq {
+            font-family: 'Noto Nastaliq Urdu', serif;
+            font-size: 1.4rem;
+            line-height: 2.5;
+            direction: ltr;
+            text-align: left;
+            color: var(--dark-charcoal);
+        }
+
+        .english-text {
+            font-style: italic;
+            color: var(--dark-charcoal);
+            line-height: 1.9;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 2px solid var(--gold-light);
+            display: none;
+        }
+
+        .english-text.visible {
+            display: block;
+            animation: fadeIn 0.4s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .toggle-btn {
+            background: linear-gradient(135deg, var(--antique-gold), var(--gold-dark));
+            color: white;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Merriweather', serif;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            display: inline-block;
+            box-shadow: 0 2px 8px rgba(197, 160, 89, 0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        .toggle-btn:hover {
+            background: linear-gradient(135deg, var(--gold-dark), var(--antique-gold));
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(197, 160, 89, 0.5);
+        }
+
+        .toggle-btn.active {
+            background: var(--royal-maroon);
+            box-shadow: 0 2px 8px rgba(94, 33, 41, 0.3);
+        }
+
+        /* Media/Press */
+        .media-list {
+            max-width: 900px;
+            margin: 2rem auto 0;
+        }
+
+        .media-item {
+            background: white;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+            border: 2px solid var(--gold-light);
+            border-left: 4px solid var(--antique-gold);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .media-item:hover {
+            transform: translateX(8px);
+            box-shadow: 0 4px 12px rgba(197, 160, 89, 0.2);
+        }
+
+        .media-item a {
+            color: var(--royal-maroon);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .media-item a:hover {
+            color: var(--antique-gold);
+            text-decoration: underline;
+        }
+
+        .media-item p {
+            color: #666;
+            margin-top: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        /* Contact */
+        .contact-content {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-content p {
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .email-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--antique-gold), var(--gold-dark));
+            color: white;
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(197, 160, 89, 0.3);
+        }
+
+        .email-btn:hover {
+            background: linear-gradient(135deg, var(--gold-dark), var(--antique-gold));
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(197, 160, 89, 0.5);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--royal-maroon);
+            color: var(--cream);
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            border-top: 3px double var(--antique-gold);
+            width: 100%;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem 1.5rem;
+            }
+
+            .logo {
+                font-size: 1.2rem;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                right: -100%;
+                width: 70%;
+                max-width: 300px;
+                height: calc(100vh - 70px);
+                background: rgba(249, 245, 235, 0.98);
+                backdrop-filter: blur(10px);
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 2rem;
+                gap: 1.5rem;
+                transition: right 0.3s ease;
+                box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+                border-left: 3px double var(--antique-gold);
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1.2rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .poems-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            section {
+                padding: 3rem 1.5rem;
+            }
+
+            .hero {
+                padding: 5rem 1.5rem 3rem;
+            }
+
+            .profile-photo {
+                width: 220px;
+                height: 220px;
+            }
+
+            .nastaliq {
+                font-size: 1.2rem;
+                line-height: 2.2;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="#home" class="logo">Mujrim Dasuhavi</a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home" onclick="closeMenu()">Home</a></li>
+            <li><a href="#biography" onclick="closeMenu()">Biography</a></li>
+            <li><a href="#poems" onclick="closeMenu()">Poems</a></li>
+            <li><a href="#media" onclick="closeMenu()">Media & Press</a></li>
+            <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="profile-photo">
+                <img src="mujrim-photo.jpg" alt="Ustad Harbans Lal Mujrim Dasuhavi">
+            </div>
+            <h1>Ustad Harbans Lal "Mujrim" Dasuhavi</h1>
+            <p class="subtitle">Punjabi & Urdu Poet</p>
+            <p class="dates">1909 — 1985</p>
+            <p class="intro">A legendary Punjabi and Urdu poet whose timeless verses continue to move and inspire readers today.</p>
+        </div>
+    </section>
+
+    <!-- Biography Section -->
+    <section id="biography">
+        <div class="section-content reveal">
+            <h2>Biography</h2>
+            <div class="biography-text">
+                <div class="biography-image">
+                    <img src="azad-darbar.jpg" alt="Azad Darbar, Dasuya">
+                    <p class="image-caption">Azad Darbar, Dasuya</p>
+                </div>
+                <div class="biography-content">
+                    <div class="bio-english">
+                        <p>Ustad Harbans Lal "Mujrim" Dasuhavi was born in 1909 in the historic town of Dasuya, Punjab. From an early age, he exhibited an exceptional command over language and poetic expression, attaining mastery in both Punjabi and Urdu with rare ease and depth.</p>
+                        
+                        <p>Rooted in the classical Ustad–Shagird tradition of the Azad Darbar, Dasuya, Ustad Mujrim Ji emerged as a distinguished torchbearer of a revered literary lineage. This tradition traces its origins to Pandit Shraddha Ram Phillauri the composer of the immortal hymn "Om Jai Jagdish Hare". It was carried forward by his disciple Ustad Mulkh Raj "Azad" and later strengthened by Ustad Khudmukhtar Sahib, under whom the foundations of this poetic parampara were firmly established.</p>
+                        
+                        <p>Ustad Mujrim Dasuhavi inherited this sacred responsibility with humility and devotion, shaping it through his own powerful voice and vision. His poetry spanning ghazals, poems, bait, folk songs, and devotional verse explored love, loss, spiritual inquiry, social reform, and the moral conscience of society. His takhallus "Mujrim" (the accused) reflected a deep inward gaze, marked by emotional honesty and self-examination.</p>
+                        
+                        <p>Beyond his literary achievements, he was a revered mentor whose influence extended across Punjab through hundreds of disciples. His mushairas were renowned for their intensity and gravitas, leaving a lasting impression on audiences and fellow poets alike. After him, the mantle of this living tradition passed to his janasheen, Ustad Deepak Jatoi, ensuring the continuity of the Ustad–Shagird parampara.</p>
+                        
+                        <p>His literary legacy was also carried forward within his family by his son, the renowned Punjabi and Urdu poet Adarsh Kumar Darshi, who upheld and enriched the poetic values and discipline inherited from his father.</p>
+                        
+                        <p>Ustad Mujrim Ji passed away in 1985, leaving behind a legacy that remains intellectually resonant and spiritually alive, continuing to guide, inspire, and challenge generations of readers and poets.</p>
+                    </div>
+                    <div class="bio-hindi" style="display: none;">
+                        <p>उस्ताद हरबंस लाल "मुजरिम" दसुहवी का जन्म 1909 में पंजाब के ऐतिहासिक शहर दसूया में हुआ था। बचपन से ही उन्होंने भाषा और काव्य अभिव्यक्ति पर असाधारण अधिकार प्रदर्शित किया, पंजाबी और उर्दू दोनों में दुर्लभ सहजता और गहराई के साथ महारत हासिल की।</p>
+                        
+                        <p>आज़ाद दरबार, दसूया की शास्त्रीय उस्ताद-शागिर्द परंपरा में निहित, उस्ताद मुजरिम जी एक सम्मानित साहित्यिक वंश के प्रतिष्ठित मशालवाहक के रूप में उभरे। यह परंपरा अमर भजन "ओम जय जगदीश हरे" के रचयिता पंडित श्रद्धा राम फिल्लौरी से शुरू होती है। इसे उनके शिष्य उस्ताद मुल्ख राज "आज़ाद" ने आगे बढ़ाया और बाद में उस्ताद खुदमुख्तार साहिब ने इसे मजबूत किया, जिनके अधीन इस काव्य परंपरा की नींव मजबूती से स्थापित हुई।</p>
+                        
+                        <p>उस्ताद मुजरिम दसुहवी ने इस पवित्र जिम्मेदारी को विनम्रता और समर्पण के साथ विरासत में लिया, इसे अपनी शक्तिशाली आवाज़ और दृष्टि के माध्यम से आकार दिया। गज़लों, कविताओं, बैत, लोक गीतों और भक्ति छंदों में फैली उनकी कविता ने प्रेम, हानि, आध्यात्मिक जिज्ञासा, सामाजिक सुधार और समाज की नैतिक चेतना की खोज की। उनका तख़ल्लुस "मुजरिम" (अभियुक्त) एक गहरी आंतरिक दृष्टि को प्रतिबिंबित करता है, जो भावनात्मक ईमानदारी और आत्म-परीक्षण से चिह्नित है।</p>
+                        
+                        <p>अपनी साहित्यिक उपलब्धियों से परे, वे एक सम्मानित गुरु थे जिनका प्रभाव सैकड़ों शिष्यों के माध्यम से पूरे पंजाब में फैला। उनके मुशायरे अपनी तीव्रता और गंभीरता के लिए प्रसिद्ध थे, जो दर्शकों और साथी कवियों पर स्थायी प्रभाव छोड़ते थे। उनके बाद, इस जीवंत परंपरा की मशाल उनके जानशीन, उस्ताद दीपक जैतोई को सौंपी गई, जिससे उस्ताद-शागिर्द परंपरा की निरंतरता सुनिश्चित हुई।</p>
+                        
+                        <p>उनकी साहित्यिक विरासत उनके परिवार में उनके बेटे, प्रसिद्ध पंजाबी और उर्दू कवि आदर्श कुमार दर्शी द्वारा भी आगे बढ़ाई गई, जिन्होंने अपने पिता से विरासत में मिले काव्य मूल्यों और अनुशासन को बरकरार रखा और समृद्ध किया।</p>
+                        
+                        <p>उस्ताद मुजरिम जी का 1985 में निधन हो गया, एक ऐसी विरासत छोड़कर जो बौद्धिक रूप से प्रतिध्वनित और आध्यात्मिक रूप से जीवित है, पाठकों और कवियों की पीढ़ियों का मार्गदर्शन, प्रेरणा और चुनौती देती रहती है।</p>
+                    </div>
+                    <button class="toggle-btn" onclick="toggleBioLanguage(this)" style="margin-top: 1.5rem;">हिंदी में पढ़ें (Read in Hindi)</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Poems Section -->
+    <section id="poems">
+        <div class="section-content">
+            <h2 class="reveal">Selected Poems</h2>
+            <div class="poems-grid">
+                <!-- Poem 1 -->
+                <div class="poem-card reveal">
+                    <h3 class="poem-title">Ghazal 1</h3>
+                    <div class="poem-text nastaliq">
+                        चश्मे उल्फ़त अगर नहीं होगी<br>
+                        जिंदगी यूँ बसर नहीं होगी<br><br>
+                        
+                        तेरे क़दमों पे मेरी नज़रें हैं<br>
+                        फिर भी तेरी नज़र नहीं होगी<br><br>
+                        
+                        शबे-फुरकत का गम मआज़ अल्ला<br>
+                        शायद इसकी सहर नहीं होगी
+                    </div>
+                    <div class="english-text">
+                        Without the eyes of love<br>
+                        Life cannot be endured this way<br><br>
+                        
+                        My eyes rest at your feet<br>
+                        Yet your gaze will not be upon me<br><br>
+                        
+                        The sorrow of separation's night, God forgive<br>
+                        Perhaps it will have no dawn
+                    </div>
+                    <button class="toggle-btn" onclick="toggleTranslation(this)">Show English Translation</button>
+                </div>
+
+                <!-- Poem 2 -->
+                <div class="poem-card reveal">
+                    <h3 class="poem-title">Ghazal 2</h3>
+                    <div class="poem-text nastaliq">
+                        शबे तारीक में ऐसे सितारे याद आते हैं<br>
+                        के जैसे गम के मारों को सहारे याद आते हैं<br><br>
+                        
+                        बड़ी कोशिश से चढ़ते हैं जु़बां पर नाम भी उनके<br>
+                        कभी नजऱों से दिल में थे उतारे याद आते हैं
+                    </div>
+                    <div class="english-text">
+                        In the dark night, such stars come to mind<br>
+                        Like support comes to those stricken by grief<br><br>
+                        
+                        Their name climbs to the tongue with great effort<br>
+                        Once brought into the heart through glances, they are remembered
+                    </div>
+                    <button class="toggle-btn" onclick="toggleTranslation(this)">Show English Translation</button>
+                </div>
+
+                <!-- Poem 3 -->
+                <div class="poem-card reveal">
+                    <h3 class="poem-title">Ghazal 3</h3>
+                    <div class="poem-text nastaliq">
+                        जो इश्को वफ़ा से कोरे हैं, वो कारे नुमायाँ कर न सके<br>
+                        जो मौत से डर कर बैठ गए, वो ज़ीस्त का सामाँ कर न सके<br><br>
+                        
+                        तुम लुत्फ़े असीरी मत पूछो, माहौले कफ़स कुछ ऐसा था<br>
+                        हम फि़ करे गुलिस्तां क्या करते, जब जिक़्रे गुलिस्तां कर न सके
+                    </div>
+                    <div class="english-text">
+                        Those untouched by love and loyalty could not accomplish great deeds<br>
+                        Those who sat fearing death could not arrange the means of life<br><br>
+                        
+                        Do not ask of the pleasure of captivity, the cage's atmosphere was such<br>
+                        What would we do thinking of the garden, when we could not even speak of it
+                    </div>
+                    <button class="toggle-btn" onclick="toggleTranslation(this)">Show English Translation</button>
+                </div>
+
+                <!-- Poem 4 -->
+                <div class="poem-card reveal">
+                    <h3 class="poem-title">Ghazal 4</h3>
+                    <div class="poem-text nastaliq">
+                        कदम बढ़ते गए अपने, अगर आहिस्ता आहिस्ता<br>
+                        मुसाफि़र ख़त्म कर लेंगे, सफ़र आहिस्ता आहिस्ता<br><br>
+                        
+                        जिगर का खून तुम, नखले तमन्ना को दिए जाओ<br>
+                        लगेंगे खुश्क डाली पर, समर आहिस्ता आहिस्ता
+                    </div>
+                    <div class="english-text">
+                        If our steps keep moving, even slowly, slowly<br>
+                        The traveler will complete the journey, slowly, slowly<br><br>
+                        
+                        Give the blood of your heart to the sapling of desire<br>
+                        Fruits will appear on the dry branch, slowly, slowly
+                    </div>
+                    <button class="toggle-btn" onclick="toggleTranslation(this)">Show English Translation</button>
+                </div>
+
+                <!-- Poem 5 -->
+                <div class="poem-card reveal">
+                    <h3 class="poem-title">Ghazal 5</h3>
+                    <div class="poem-text nastaliq">
+                        आसमाँ पर जो चाँद तारे हैं<br>
+                        मेरी आहों के ही शरारे हैं<br><br>
+                        
+                        तुंद मौजों से कौन डरता है<br>
+                        यह भी अपने लिए किनारे हैं<br><br>
+                        
+                        आंसुओं की ज़ुबान को समझो<br>
+                        दर्द मंदों के यह इशारे हैं
+                    </div>
+                    <div class="english-text">
+                        The moon and stars in the sky<br>
+                        Are but sparks of my sighs<br><br>
+                        
+                        Who fears the fierce waves<br>
+                        These too are shores for us<br><br>
+                        
+                        Understand the language of tears<br>
+                        These are the signs of the afflicted
+                    </div>
+                    <button class="toggle-btn" onclick="toggleTranslation(this)">Show English Translation</button>
+                </div>
+
+                <!-- Poem 6 -->
+                <div class="poem-card reveal">
+                    <h3 class="poem-title">Ghazal 6</h3>
+                    <div class="poem-text nastaliq">
+                        हमारी सांस इक चलती हुई तलवार होती है<br>
+                        फिर अपनी जिंदगी की हर घडी दुश्वार होती है<br><br>
+                        
+                        ज़बां से कुछ न कह लेकिन सरापा इल्तजा हो जा<br>
+                        दिले तारीक पर फिर बारिशे अन्वार होती है
+                    </div>
+                    <div class="english-text">
+                        Our breath is a moving sword<br>
+                        Thus every moment of our life becomes difficult<br><br>
+                        
+                        Say nothing with the tongue, but become entirely supplication<br>
+                        Upon the dark heart then rains a shower of lights
+                    </div>
+                    <button class="toggle-btn" onclick="toggleTranslation(this)">Show English Translation</button>
+                </div>
+
+                <!-- Poem 7 -->
+                <div class="poem-card reveal">
+                    <h3 class="poem-title">Ghazal 7</h3>
+                    <div class="poem-text nastaliq">
+                        हर शै में तू है लेकिन मेरी नज़र कहाँ है<br>
+                        दिल में तलाश तेरी तू जल्वागर कहाँ है<br><br>
+                        
+                        साकी के पाँव पर ही सजदे गुजारता हूँ<br>
+                        वैसे मै जानता हूँ मस्जिद का दर कहाँ है
+                    </div>
+                    <div class="english-text">
+                        You are in everything, but where is my sight<br>
+                        Your search is in my heart, where are you manifest<br><br>
+                        
+                        I prostrate at the feet of the cupbearer<br>
+                        Though I know where the door to the mosque is
+                    </div>
+                    <button class="toggle-btn" onclick="toggleTranslation(this)">Show English Translation</button>
+                </div>
+
+                <!-- Poem 8 -->
+                <div class="poem-card reveal">
+                    <h3 class="poem-title">Ghazal 8</h3>
+                    <div class="poem-text nastaliq">
+                        कोई बात लब तक न आई मगर<br>
+                        इशारों से हर बात होती रही<br><br>
+                        
+                        वो आयेंगे आ कर चले जायेंगे<br>
+                        यह क्या बात दिन रात होती रही<br><br>
+                        
+                        तसव्वुर के आलम में हर रोज़ ही<br>
+                        हमारी मुलाकात होती रही
+                    </div>
+                    <div class="english-text">
+                        No words came to the lips, yet<br>
+                        Every matter was conveyed through gestures<br><br>
+                        
+                        They will come and having come, will leave<br>
+                        What is this that kept happening day and night<br><br>
+                        
+                        In the realm of imagination, every day<br>
+                        Our meeting kept occurring
+                    </div>
+                    <button class="toggle-btn" onclick="toggleTranslation(this)">Show English Translation</button>
+                </div>
+
+                <!-- Poem 9 -->
+                <div class="poem-card reveal">
+                    <h3 class="poem-title">Ghazal 9</h3>
+                    <div class="poem-text nastaliq">
+                        बशर जब तक तुम्हारे हुस्न पर शैदा नहीं होता<br>
+                        बसारत का उसे हासिल कभी दर्जा नहीं होता<br><br>
+                        
+                        मरीज़े इश्क पर जब तक नज़र उनकी नहीं होती<br>
+                        मरीज़े इश्क दुनिया में कभी अच्छा नहीं होता
+                    </div>
+                    <div class="english-text">
+                        Until a person becomes enamored of your beauty<br>
+                        They never attain the degree of true insight<br><br>
+                        
+                        Until your gaze falls upon the patient of love<br>
+                        The patient of love never recovers in this world
+                    </div>
+                    <button class="toggle-btn" onclick="toggleTranslation(this)">Show English Translation</button>
+                </div>
+
+                <!-- Poem 10 -->
+                <div class="poem-card reveal">
+                    <h3 class="poem-title">Ghazal 10</h3>
+                    <div class="poem-text nastaliq">
+                        तसव्वुर का हर आलम भी है कितना कैफ़ का आलम<br>
+                        कि दिल ही दिल ने की बातें सवाल आया जवाब आया<br><br>
+                        
+                        हया आई तो ले आई वो अपने साथ शोख़ी भी<br>
+                        ज़माने के लिए तेरा कज़ा बन कर शबाब आया
+                    </div>
+                    <div class="english-text">
+                        Every state of imagination is such a state of ecstasy<br>
+                        That heart conversed with heart, question came, answer came<br><br>
+                        
+                        When modesty came, it brought mischief along with it<br>
+                        For the world, your youth came as destiny itself
+                    </div>
+                    <button class="toggle-btn" onclick="toggleTranslation(this)">Show English Translation</button>
+                </div>
+
+                <!-- Poem 11 -->
+                <div class="poem-card reveal">
+                    <h3 class="poem-title">Ghazal 11</h3>
+                    <div class="poem-text nastaliq">
+                        हुस्न की दुनियां में ऐसे खो गए<br>
+                        हम भी गोया हूबहू बुत हो गए<br><br>
+                        
+                        संगदिल हैं कितने यह गुल्पोश भी<br>
+                        इश्क के रस्ते में कांटे बो गए<br><br>
+                        
+                        दिल में क्यों खामोश हैं अरमान यूँ<br>
+                        क्या हमेशा के लिए यह सो गए
+                    </div>
+                    <div class="english-text">
+                        So lost we became in the world of beauty<br>
+                        That we too became idols, as it were<br><br>
+                        
+                        How stone-hearted are these flower-wearers<br>
+                        They sowed thorns on the path of love<br><br>
+                        
+                        Why are desires so silent in the heart<br>
+                        Have they fallen asleep forever
+                    </div>
+                    <button class="toggle-btn" onclick="toggleTranslation(this)">Show English Translation</button>
+                </div>
+
+                <!-- Poem 12 -->
+                <div class="poem-card reveal">
+                    <h3 class="poem-title">Ghazal 12</h3>
+                    <div class="poem-text nastaliq">
+                        इम्तियाज़े रंगो बू कुछ भी नहीं<br>
+                        इख्तिलाफ़े माओ तू कुछ भी नहीं<br><br>
+                        
+                        तुम बहा देते हो पानी की तरह<br>
+                        ऐ बुतो मेरा लहू कुछ भी नहीं<br><br>
+                        
+                        आरज़ू ने दिल फ़सुर्दा कर दिया<br>
+                        इसलिए अब आरज़ू कुछ भी नहीं
+                    </div>
+                    <div class="english-text">
+                        The distinction of color and fragrance is nothing<br>
+                        The difference between me and you is nothing<br><br>
+                        
+                        You spill it like water<br>
+                        O idol, my blood is nothing to you<br><br>
+                        
+                        Desire has made my heart dejected<br>
+                        Therefore now desire means nothing
+                    </div>
+                    <button class="toggle-btn" onclick="toggleTranslation(this)">Show English Translation</button>
+                </div>
+
+                <!-- Poem 13 -->
+                <div class="poem-card reveal">
+                    <h3 class="poem-title">Ghazal 13</h3>
+                    <div class="poem-text nastaliq">
+                        हुस्न में मेहरो वफ़ा कुछ भी नहीं<br>
+                        इश्क में ग़म के सिवा कुछ भी नहीं<br><br>
+                        
+                        हुस्न ही कुछ आपका था बे-मिसाल<br>
+                        मेरी आँखों की ख़ता कुछ भी नहीं<br><br>
+                        
+                        मुद्दुआ है महज़ दीद-ए-हुस्न का<br>
+                        और अपना मुद्दुआ कुछ भी नहीं
+                    </div>
+                    <div class="english-text">
+                        In beauty there is no kindness or loyalty<br>
+                        In love there is nothing but sorrow<br><br>
+                        
+                        Your beauty alone was incomparable<br>
+                        There is no fault in my eyes<br><br>
+                        
+                        The purpose is merely the vision of beauty<br>
+                        And our purpose is nothing else
+                    </div>
+                    <button class="toggle-btn" onclick="toggleTranslation(this)">Show English Translation</button>
+                </div>
+
+		<!-- Punjabi Poem 1 -->
+                <div class="poem-card reveal">
+                    <h3 class="poem-title">Punjabi Ghazal 1</h3>
+                    <div class="poem-text nastaliq">
+                        ਰਾਤ ਦਿਨ ਆਹ ਆਹ ਕਰਦੇ ਆਂ<br>
+                        ਜ਼ਿੰਦਗੀ ਨੂੰ ਤਬਾਹ ਕਰਦੇ ਆਂ<br><br>
+                        
+                        ਜਿਸ ਤਰਫ਼ ਵੀ ਨਿਗਾਹ ਕਰਦੇ ਆਂ<br>
+                        ਵਸਦਿਆਂ ਨੂੰ ਤਬਾਹ ਕਰਦੇ ਆਂ<br><br>
+                        
+                        ਕੋਈ ਕੰਮ ਵੀ ਖਰਾ ਨਹੀਂ ਕਰਦੇ<br>
+                        ਫੇਰ ਕੰਮ ਕੀ ਸੁਆਹ  ਕਰਦੇ ਆਂ<br><br>
+                        
+                        ਤੰਗ ਆ ਕੇ ਹੀ ਦੋਸਤਾਂ ਕੋਲੋਂ<br>
+                        ਦੁਸ਼ਮਨਾਂ ਤੇ ਵਸਾਹ ਕਰਦੇ ਆਂ
+                    </div>
+                    <div class="english-text">
+                        Day and night we sigh and lament<br>
+                        Destroying our own life<br><br>
+                        
+                        Whichever way we cast our gaze<br>
+                        We bring ruin to the settled<br><br>
+                        
+                        No work do we complete properly<br>
+                        Then what use is making efforts<br><br>
+                        
+                        Fed up with our friends<br>
+                        We place trust in enemies
+                    </div>
+                    <button class="toggle-btn" onclick="toggleTranslation(this)">Show English Translation</button>
+                </div>
+
+                <!-- Punjabi Poem 2 -->
+                <div class="poem-card reveal">
+                    <h3 class="poem-title">Punjabi Ghazal 2</h3>
+                    <div class="poem-text nastaliq">
+                        ਹੁਣ ਸ਼ੋਰ ਨਾ ਮਚਾਓ, ਬਰਸਾਤ ਆ ਗਈ ਏ<br>
+                        ਕੋਈ ਯਾਦ ਨਾ ਦਿਲਾਓ, ਬਰਸਾਤ ਆ ਗਈ ਏ<br><br>
+                        
+                        ਮੇਰੇ ਮਹਿਬੂਬ ਦੀਆਂ ਜ਼ੁਲਫ਼ਾਂ ਖਲਾਰਿਓ ਨਾ<br>
+                        ਠਹਿਰੋ ਜ਼ਰਾ ਹਵਾਓ, ਬਰਸਾਤ ਆ ਗਈ ਏ<br><br>
+                        
+                        ਲੱਗੂ ਠਿਕਾਨੇ ਆਪੇ, ਕਿਸ਼ਤੀ ਭੰਵਰ ਚੋ ਮੇਰੀ<br>
+                        ਜਾਓ ਐ ਨਾ-ਖੁਦਾਓ, ਬਰਸਾਤ ਆ ਗਈ ਏ<br><br>
+                        
+                        ਰਿੰਦੋ ਘਟਾ ਮੁਬਾਰਕ, ਇਸੇ ਹੀ ਹੁਣ ਖੁਸ਼ੀ ਵਿੱਚ<br>
+                        ਸੂਫ਼ੀ ਨੂੰ ਵੀ ਪਿਲਾਓ, ਬਰਸਾਤ ਆ ਗਈ ਏ
+                    </div>
+                    <div class="english-text">
+                        Make no clamor now, the rains have come<br>
+                        Remind me of nothing, the rains have come<br><br>
+                        
+                        Do not tousle my beloved's tresses<br>
+                        Wait a moment, O wind, the rains have come<br><br>
+                        
+                        My boat reaches shore from the whirlpool itself<br>
+                        Go away, O helmsman, the rains have come<br><br>
+                        
+                        O reveler, the clouds are blessed, now in joy<br>
+                        Offer drink to the Sufi too, the rains have come
+                    </div>
+                    <button class="toggle-btn" onclick="toggleTranslation(this)">Show English Translation</button>
+                </div>
+
+                <!-- Punjabi Poem 3 -->
+                <div class="poem-card reveal">
+                    <h3 class="poem-title">Punjabi Ghazal 3</h3>
+                    <div class="poem-text nastaliq">
+                        ਬੁਰਕੇ ਉਤਾਰ ਦੇਵੋ ਬਰਸਾਤ ਆ ਰਹੀ ਹੈ<br>
+                        ਜ਼ੁਲਫ਼ਾਂ ਖਿਲਾਰ ਦੇਵੋ ਬਰਸਾਤ ਆ ਰਹੀ ਹੈ<br><br>
+                        
+                        ਸਾਕੀ ਦੀ ਅੱਖੀਆਂ ਚੋਂ ਬਰਸਨ ਸ਼ਰਾਬ ਲਾਗ ਪਈ<br>
+                        ਤਕਵੇ ਵਸਾਰ ਦੇਵੋ ਬਰਸਾਤ ਆ ਰਹੀ ਹੈ<br><br>
+                        
+                        ਬਾਜ਼ੀ ਜੇ ਜਿੱਤਣੀ ਏਂ ਓਹ ਆਸ਼ਕੋ ਤੁਸਾਂ ਹੁਣ<br>
+                        ਸਬ ਕੁਝ ਹੀ ਹਾਰ ਦੇਵੋ ਬਰਸਾਤ ਆ ਰਹੀ ਹੈ<br><br>
+                        
+                        ਪਿੱਪਲਾਂ ਤੇ ਪੀਂਘ ਪਾ ਲਓ ਪੀਂਘਾਂ ਤੇ ਆਪ ਚੜ੍ਹ ਕੇ<br>
+                        ਸੀਨੇ ਉਭਾਰ ਦੇਵੋ ਬਰਸਾਤ ਆ ਰਹੀ ਹੈ
+                    </div>
+                    <div class="english-text">
+                        Remove the veil, the rains are coming<br>
+                        Let the tresses flow, the rains are coming<br><br>
+                        
+                        From the cupbearer's eyes wine has begun to pour<br>
+                        Forget piety, the rains are coming<br><br>
+                        
+                        If you wish to win the game, O lover, now<br>
+                        Lose everything, the rains are coming<br><br>
+                        
+                        Set swings on the pipal trees, climb upon them<br>
+                        Swell your chest with pride, the rains are coming
+                    </div>
+                    <button class="toggle-btn" onclick="toggleTranslation(this)">Show English Translation</button>
+                </div>
+
+                <!-- Punjabi Poem 4 -->
+                <div class="poem-card reveal">
+                    <h3 class="poem-title">Punjabi Ghazal 4</h3>
+                    <div class="poem-text nastaliq">
+                        ਮੇਰੇ ਖੁਦਾ ਦੀ ਰਹਿਮਤ ਬਣ ਕੇ ਘਟਾ ਓਹ ਆਈ<br>
+                        ਖੁਸ਼ ਹੋਵੋ ਹੁਣ ਮੈ-ਖਾਰੋ ਬਰਸਾਤ ਆ ਗਈ ਏ<br><br>
+                        
+                        ਬਿਜਲੀ ਦੇ ਵਾਂਗ  ਚਮਕੂ ਸੱਧਰਾਂ ਦੀ ਰਾਤ ਕਾਲੀ<br>
+                        ਬਿਗੜੀ ਮੇਰੀ ਸੰਵਾਰੋ ਬਰਸਾਤ ਆ ਗਈ ਏ<br><br>
+                        
+                        ਮੰਜ਼ਿਲ ਕਰੀਬ ਹੁਣ ਤੇ ਰੁਕਨਾ ਹੈ ਨਾ-ਮੁਨਾਸਬ<br>
+                        ਹੁਣ ਹੌਂਸਲਾ ਨਾ ਹਾਰੋ ਬਰਸਾਤ ਆ ਗਈ ਏ<br><br>
+                        
+                        ਅੰਨੀ ਮਚੀ ਹੋਈ ਏ ਨੱਢੀਆਂ ਦੇ ਬੁਰਕਿਆਂ ਵਿਚ<br>
+                        ਅੱਲਾ ਨੂੰ ਹੁਣ ਪੁਕਾਰੋ ਬਰਸਾਤ ਆ ਗਈ ਏ
+                    </div>
+                    <div class="english-text">
+                        As my God's mercy the clouds have come<br>
+                        Be joyful now, O wine-drinkers, the rains have come<br><br>
+                        
+                        Like lightning flash in the dark night of drought<br>
+                        Repair what is ruined, the rains have come<br><br>
+                        
+                        The destination is near, to stop now is improper<br>
+                        Do not lose courage now, the rains have come<br><br>
+                        
+                        There's chaos in the young maidens' veils<br>
+                        Call upon Allah now, the rains have come
+                    </div>
+                    <button class="toggle-btn" onclick="toggleTranslation(this)">Show English Translation</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media & Press Section -->
+    <section id="media">
+        <div class="section-content reveal">
+            <h2>Media & Press</h2>
+            <div class="media-list">
+                <div class="media-item">
+                    <a href="#" onclick="toggleArticle(event)">तड़पना इस तरफ दिल का उधर उनका मचल जाना </a>
+                    <p>Commemorative article on his life, works, and lasting literary legacy</p>
+                    <div id="full-article" style="display: none; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 2px solid var(--gold-light); line-height: 1.9; color: var(--dark-charcoal);">
+                        <p style="margin-bottom: 1rem;"><strong>तड़पना इस तरफ दिल का उधर उनका मचल जाना (40वीं पुण्य तिथि पर विशेष)</strong></p>
+                        
+                        <p style="margin-bottom: 1rem;">पंजाबी व उर्दू के उस्ताद शायर जनाब हरबंस लाल मुजरिम जी ने 1909 से 1985 तक के जीवन काल में लगभग पांच दशक तक काव्य की हरेक विधा गज़ल, कविता, बैंत, लोक गीत, भजन के माध्यम से यहाँ महापुरुषों के जीवन दर्शन, राष्ट्रीयता, ईश्वर भक्ति व समाज सुधार की रचनाओं से तत्कालीन सामाजिक, धार्मिक व राजनीतिक जीवन का चित्रण कर स्वतंत्रता प्राप्ति आन्दोलन से जुड़े जनमानस को प्रेरित ही नहीं किया अपितु बंटवारे के समय देश व धर्म के नाम पर हुए दंगा फसाद के जि़म्मेवार मज़हबी जनून के शिकार राजनेताओं को खुदाई कहर से बचने की हिदायत भी दी।</p>
+
+                        <p style="margin-bottom: 1rem;">उस्तादी और शागिर्दी के परम्परागत कवि मुजरिम जी ने दाग़ स्कूल आफ पोएट्री के अहम सिपाहसालार पदम श्री जोश मलसियानी जी एवं पंजाबी में दसूहा के ही उस्ताद ख़ुदमुख़्तार जी की शागिर्दी की और जब उस्ताद मुजरिम जी के शागिर्दों में दीपक जैतोई जैसे शायर स्वयं उस्ताद तस्लीम किये जाने लगे तो उन्होंने पूरे अधिकार से अपनी एक गज़ल के मक्ते में यूँ कहा है:</p>
+
+                        <p style="margin-bottom: 1rem; font-style: italic; padding-left: 1.5rem;">होर होवेगी भला उस्तादीआँ दी की सनद<br>हजऱते मुजरिम दे सब शागिर्द ने उस्ताद हुन</p>
+
+                        <p style="margin-bottom: 1rem;"><strong>उनकी उर्दू ग़ज़ल के कुछ शेयर देखिए:</strong></p>
+
+                        <p style="margin-bottom: 1rem; font-style: italic; padding-left: 1.5rem;">कभी ज़ुल्फ़ों के नखरे से कभी रुखसार के तिल पर<br>परिंदा एक है दिल का मगर हैं आशियाने दो<br>तड़पना इस तरफ दिल का उधर उनका मचल जाना<br>हक़ीक़त एक रखते हैं मोहब्बत के फ़साने दो</p>
+
+                        <p style="margin-bottom: 1rem;">राजनीति से सर्वदा दूर थे लेकिन दिल्ली में पंडित जवाहर लाल नेहरु की सदारत में लाल किले से लेकर प्रताप सिंह कैरों व ज्ञानी जैल सिंह की विशाल सभाओं में आयोजित कवि दरबारों की शोभा बने। उनकी कविता इन्सानियत का लाहौर रेडियो स्टेशन से तीन बार प्रसारण हुआ। वर्षों तक उनकी रचनाएँ उर्दू पंजाबी समाचार पत्रों की शोभा रहीं रेडियो स्टेशन जालंधर से वर्षों उनकी कविताओं का प्रसारण होता रहा।</p>
+
+                        <p style="margin-bottom: 1rem;">मुजरिम जी की अधिकांश रचनाएँ जातिवाद, साम्प्रदायिकता, विध्वा विवाह, बाल विवाह, शुद्धि आन्दोलन आदि विषयों पर केन्द्रित रहीं। आर्य समाज के वर्षों तक प्रधान रहे। स्वतंत्रता आन्दोलन के प्रथम आशिक ऋषि दयानंद के विचारों से प्रभावित थे।</p>
+
+                        <p style="margin-bottom: 1rem;">उनकी चुनी हुई गजलों का संकलन उनके परिवार द्वारा प्रकाशित पंजाबी गज़ल संग्रह दर्पण का विमोचन 1986 में भाषा विभाग पंजाब के तत्कालीन डायरेक्टर श्री गोयल द्वारा भाषा विभाग द्वारा मुजरिम जी की याद में करवाए गए राज्य स्तरीय कवि दरबार में किया गया। मुजरिम जी की याद में आर्य समाज दसूहा द्वारा एक पुस्तकालय का निर्माण करवाया गया।</p>
+
+                        <p style="margin-bottom: 1rem;">16 जनवरी 1985 को वह इस संसार को छोड़ गए लगभग 10 वर्ष बाद 16 जनवरी को ही उनकी धर्मपत्नी प्रेम लता भी स्वर्ग सिधारी। उस्ताद मुजरिम जी की रचनाएँ आज भी उतनी ही ताज़ा व समायिक हैं कि उनकी एक एक रचना पर शोध ग्रन्थ लिख कर पी एच डी की उपाधि प्राप्त की जा सकती है।</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="section-content reveal">
+            <h2>Contact</h2>
+            <div class="contact-content">
+                <p>For inquiries about Ustad Harbans Lal "Mujrim" Dasuhavi's works, permissions, or to share memories and stories, please reach out at <a href="mailto:contactmujrimdasuhavi@gmail.com" style="color: var(--antique-gold); text-decoration: none; font-weight: 600;">contactmujrimdasuhavi@gmail.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Estate of Ustad Harbans Lal "Mujrim" Dasuhavi | Preserving a Literary Legacy</p>
+        <p style="margin-top: 0.75rem; font-size: 0.9rem;">Adarsh Homeland</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Toggle Biography Language
+        function toggleBioLanguage(button) {
+            const bioEnglish = document.querySelector('.bio-english');
+            const bioHindi = document.querySelector('.bio-hindi');
+            
+            if (bioHindi.style.display === 'none') {
+                bioEnglish.style.display = 'none';
+                bioHindi.style.display = 'block';
+                button.textContent = 'Read in English';
+            } else {
+                bioEnglish.style.display = 'block';
+                bioHindi.style.display = 'none';
+                button.textContent = 'हिंदी में पढ़ें (Read in Hindi)';
+            }
+        }
+
+        // Toggle Translation
+        function toggleTranslation(button) {
+            const card = button.closest('.poem-card');
+            const englishText = card.querySelector('.english-text');
+            
+            if (englishText.classList.contains('visible')) {
+                englishText.classList.remove('visible');
+                button.textContent = 'Show English Translation';
+                button.classList.remove('active');
+            } else {
+                englishText.classList.add('visible');
+                button.textContent = 'Hide English Translation';
+                button.classList.add('active');
+            }
+        }
+
+        // Toggle Article
+        function toggleArticle(event) {
+            event.preventDefault();
+            const article = document.getElementById('full-article');
+            const link = event.target;
+            
+            if (article.style.display === 'none') {
+                article.style.display = 'block';
+                link.textContent = 'तड़पना इस तरफ दिल का उधर उनका मचल जाना (Click to collapse)';
+            } else {
+                article.style.display = 'none';
+                link.textContent = 'तड़पना इस तरफ दिल का उधर उनका मचल जाना (40th Punya Tithi Special)';
+            }
+        }
+
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            const hamburger = document.getElementById('hamburger');
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        }
+
+        function closeMenu() {
+            const navLinks = document.getElementById('navLinks');
+            const hamburger = document.getElementById('hamburger');
+            navLinks.classList.remove('active');
+            hamburger.classList.remove('active');
+        }
+
+        // Scroll Reveal Animation
+        function reveal() {
+            const reveals = document.querySelectorAll('.reveal');
+            
+            for (let i = 0; i < reveals.length; i++) {
+                const windowHeight = window.innerHeight;
+                const elementTop = reveals[i].getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add('active');
+                }
+            }
+        }
+
+        window.addEventListener('scroll', reveal);
+        reveal(); // Check on load
+
+        // Smooth scroll offset for fixed nav
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                const offset = 80;
+                const targetPosition = target.offsetTop - offset;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
